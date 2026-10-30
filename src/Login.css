@@ -1,0 +1,236 @@
+
+* {
+  box-sizing: border-box;
+}
+
+.login-page {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background: #f5f6ff;
+  font-family: "Segoe UI", Arial, sans-serif;
+}
+
+.login-brand-panel {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 65px;
+  color: #ffffff;
+  background: linear-gradient(145deg, #312e81, #6d28d9, #7c3aed);
+}
+
+.brand-icon {
+  display: grid;
+  place-items: center;
+  width: 66px;
+  height: 66px;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.17);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  font-size: 24px;
+  font-weight: 800;
+  margin-bottom: 38px;
+}
+
+.brand-tag,
+.login-eyebrow {
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+.brand-tag {
+  color: #ddd6fe;
+}
+
+.login-brand-panel h1 {
+  margin: 10px 0;
+  font-size: clamp(32px, 4vw, 48px);
+  line-height: 1.15;
+}
+
+.brand-description {
+  max-width: 430px;
+  color: #e9e7ff;
+  line-height: 1.8;
+  margin: 18px 0 30px;
+}
+
+.brand-feature {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 11px 0;
+  color: #f5f3ff;
+}
+
+.brand-feature span {
+  display: grid;
+  place-items: center;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.18);
+}
+
+.login-form-panel {
+  display: grid;
+  place-items: center;
+  padding: 35px;
+}
+
+.login-card {
+  width: 100%;
+  max-width: 420px;
+  padding: 38px;
+  border: 1px solid #e5e7eb;
+  border-radius: 24px;
+  background: #ffffff;
+  box-shadow: 0 20px 65px rgba(49, 46, 129, 0.12);
+}
+
+.login-mobile-icon {
+  display: none;
+}
+
+.login-eyebrow {
+  margin: 0 0 10px;
+  color: #7c3aed;
+}
+
+.login-card h2 {
+  margin: 0;
+  color: #1e1b4b;
+  font-size: 30px;
+}
+
+.login-subtitle {
+  color: #64748b;
+  font-size: 14px;
+  line-height: 1.7;
+  margin-bottom: 28px;
+}
+
+.login-card label {
+  display: block;
+  margin: 18px 0 8px;
+  color: #334155;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.login-input-wrap {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-width: 0;
+  padding: 0 13px;
+  border: 1px solid #dbe1ec;
+  border-radius: 11px;
+  background: #f8fafc;
+  transition: 0.2s;
+}
+
+.login-input-wrap:focus-within {
+  border-color: #8b5cf6;
+  background: #ffffff;
+  box-shadow: 0 0 0 4px rgba(139, 92, 246, 0.12);
+}
+
+.login-input-wrap > span {
+  color: #8b5cf6;
+}
+
+.login-input-wrap input {
+  flex: 1;
+  width: 0;
+  min-width: 0;
+  padding: 14px 0;
+  border: 0;
+  outline: none;
+  background: transparent;
+  color: #1e293b;
+  font-size: 14px;
+}
+
+.password-toggle {
+  padding: 5px 0;
+  border: 0;
+  background: transparent;
+  color: #6d28d9;
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.login-submit {
+  width: 100%;
+  padding: 15px;
+  margin-top: 24px;
+  border: none;
+  border-radius: 11px;
+  background: linear-gradient(100deg, #6d28d9, #4f46e5);
+  color: white;
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.login-submit:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(109, 40, 217, 0.25);
+}
+
+.login-submit:disabled {
+  opacity: 0.65;
+  cursor: wait;
+  transform: none;
+}
+
+.login-message {
+  margin: 14px 0 0;
+  color: #dc2626;
+  font-size: 13px;
+}
+
+.login-footer {
+  margin: 22px 0 0;
+  color: #94a3b8;
+  font-size: 12px;
+  text-align: center;
+  line-height: 1.6;
+}
+
+@media (max-width: 800px) {
+  .login-page {
+    grid-template-columns: 1fr;
+  }
+
+  .login-brand-panel {
+    display: none;
+  }
+
+  .login-form-panel {
+    min-height: 100vh;
+    padding: 22px;
+    background: linear-gradient(145deg, #ede9fe, #eff6ff);
+  }
+
+  .login-card {
+    padding: 28px 23px;
+  }
+
+  .login-mobile-icon {
+    display: grid;
+    place-items: center;
+    width: 52px;
+    height: 52px;
+    margin-bottom: 24px;
+    border-radius: 15px;
+    background: linear-gradient(135deg, #6d28d9, #4f46e5);
+    color: white;
+    font-weight: 800;
+  }
+}
